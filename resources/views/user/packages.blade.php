@@ -45,10 +45,10 @@
                     </h2>
                   </div>
                   <div class="card-date">
-                    <a href="" class="date-b">{{ Str::limit($item->description, 50) }}</a>
+                    <a href="{{ route('user.packages-detail', ['packages' => $item->slug]) }}" class="date-b">{{ Str::limit($item->description, 50) }}</a>
                   </div>
                   <div class="card-category-b mt-2">
-                    <a href="" class="category-b text-white">{{ $item->price }}</a>
+                    <a href="{{ route('user.packages-detail', ['packages' => $item->slug]) }}" class="category-b text-white">{{ $item->price }}</a>
                   </div>
                 </div>
               </div>

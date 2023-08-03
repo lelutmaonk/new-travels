@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PackagesController;
+use App\Http\Controllers\PickupController;
 use App\Http\Controllers\UserHomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,8 +30,15 @@ Route::delete('/admin/packages/{packages:packages_id}', [PackagesController::cla
 // 1.3 INCLUDED PACKAGES
 // 1.4 ADDITONAL NOTE
 
-Route::get('/admin/pickup', [PackagesController::class, 'index'])->name('admin.pickup.index');
+// 2.1 PICKUP
+Route::get('/admin/pickup', [PickupController::class, 'index'])->name('admin.pickup.index');
+Route::get('/admin/pickup/create', [PickupController::class, 'create'])->name('admin.pickup.create');
+Route::post('/admin/pickup', [PickupController::class, 'store'])->name('admin.pickup.store');
+Route::get('/admin/pickup/edit/{pickup:pickup_id}', [PickupController::class, 'edit'])->name('admin.pickup.edit');
+Route::put('/admin/pickup/{pickup:pickup_id}', [PickupController::class, 'update'])->name('admin.pickup.update');
+Route::delete('/admin/pickup/{pickup:pickup_id}', [PickupController::class, 'destroy'])->name('admin.pickup.destroy');
 
+// 3.1 ACTIVITIES
 Route::get('/admin/activities', [PackagesController::class, 'index'])->name('admin.activities.index');
 
 // 2.X USER

@@ -14,7 +14,16 @@ class CreatePickupTable extends Migration
     public function up()
     {
         Schema::create('pickup', function (Blueprint $table) {
-            $table->id();
+            $table->increments('pickup_id');
+            $table->string('slug');
+            $table->string('pickup_name');
+            $table->string('pickup_name_in');
+            $table->string('price');
+            $table->string('price_in');
+            $table->text('description');
+            $table->text('description_in');
+            $table->text('image');
+
             $table->timestamps();
         });
     }
