@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PackagesController;
+use App\Http\Controllers\UserHomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('admin.layouts._blank');
-});
 
 // 1.X MASTER PACKAGES
 // 1.1 PACKAGES
@@ -33,3 +30,6 @@ Route::delete('/admin/packages/{packages:packages_id}', [PackagesController::cla
 Route::get('/admin/pickup', [PackagesController::class, 'index'])->name('admin.pickup.index');
 
 Route::get('/admin/activities', [PackagesController::class, 'index'])->name('admin.activities.index');
+
+// 2.X USER
+Route::get('/', [UserHomeController::class, 'index'])->name('user.home');
