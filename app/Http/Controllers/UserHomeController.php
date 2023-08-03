@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Packages;
+use App\Models\Pickup;
 use Illuminate\Http\Request;
 
 class UserHomeController extends Controller
@@ -32,6 +33,24 @@ class UserHomeController extends Controller
         return view('user.packages-detail', [
             'title' => 'Packages Detail',
             'packages' => $packages
+        ]);
+    }
+
+    public function pickup()
+    {
+        $pickup = Pickup::orderBy('updated_at', 'desc')->get();
+
+        return view('user.pickup', [
+            'title' => 'Packages',
+            'pickup' => $pickup
+        ]);
+    }
+
+    public function pickupDetail(Pickup $pickup)
+    {
+        return view('user.pickup-detail', [
+            'title' => 'Pickup Detail',
+            'pickup' => $pickup
         ]);
     }
 

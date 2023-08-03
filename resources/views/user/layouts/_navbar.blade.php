@@ -20,7 +20,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="">Pick Up</a>
+            <a class="nav-link " href="{{ route('user.pickup') }}">Pick Up</a>
           </li>
 
           <li class="nav-item">

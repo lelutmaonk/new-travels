@@ -45,3 +45,6 @@ Route::get('/admin/activities', [PackagesController::class, 'index'])->name('adm
 Route::get('/', [UserHomeController::class, 'index'])->name('user.home');
 Route::get('/packages', [UserHomeController::class, 'packages'])->name('user.packages');
 Route::get('/packages/{packages:slug}', [UserHomeController::class, 'packagesDetail'])->name('user.packages-detail');
+Route::get('/pickup', [UserHomeController::class, 'pickup'])->name('user.pickup');
+Route::get('/pickup/{pickup:slug}', [UserHomeController::class, 'pickupDetail'])->name('user.pickup-detail');
+
