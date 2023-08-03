@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 // 1.X MASTER PACKAGES
+// 1.0 DASHBOARD
+Route::get('/admin', function(){return view('admin.layouts._blank', ['title' => 'Dashboard']);})->name('admin.dashboard.index');
 // 1.1 PACKAGES
 Route::get('/admin/packages', [PackagesController::class, 'index'])->name('admin.packages.index');
 Route::get('/admin/packages/create', [PackagesController::class, 'create'])->name('admin.packages.create');
@@ -33,3 +35,5 @@ Route::get('/admin/activities', [PackagesController::class, 'index'])->name('adm
 
 // 2.X USER
 Route::get('/', [UserHomeController::class, 'index'])->name('user.home');
+Route::get('/packages', [UserHomeController::class, 'packages'])->name('user.packages');
+Route::get('/packages/{packages:slug}', [UserHomeController::class, 'packagesDetail'])->name('user.packages-detail');

@@ -16,15 +16,15 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="">Paket Tour</a>
+            <a class="nav-link " href="{{ route('user.packages') }}">Packages</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="">Transfer</a>
+            <a class="nav-link " href="">Pick Up</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="">Aktivitas Di Bali</a>
+            <a class="nav-link " href="">Activities in Bali</a>
           </li>
 
           <li class="nav-item">

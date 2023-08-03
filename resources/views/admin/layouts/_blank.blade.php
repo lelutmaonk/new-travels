@@ -3,7 +3,7 @@
 @section('content')
 <div class="card mb-4">
     <div class="card-header">
-        Table Package's
+        Dasboard
     </div>
     <div class="card-body">
     </div>

@@ -16,4 +16,23 @@ class UserHomeController extends Controller
             'packages' => $packages
         ]);
     }
+
+    public function packages()
+    {
+        $packages = Packages::orderBy('updated_at', 'desc')->get();
+
+        return view('user.packages', [
+            'title' => 'Packages',
+            'packages' => $packages
+        ]);
+    }
+
+    public function packagesDetail(Packages $packages)
+    {
+        return view('user.packages-detail', [
+            'title' => 'Packages Detail',
+            'packages' => $packages
+        ]);
+    }
+
 }
