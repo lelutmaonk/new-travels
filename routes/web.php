@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActivitiesController;
 use App\Http\Controllers\PackagesController;
 use App\Http\Controllers\PickupController;
 use App\Http\Controllers\UserHomeController;
@@ -39,7 +40,12 @@ Route::put('/admin/pickup/{pickup:pickup_id}', [PickupController::class, 'update
 Route::delete('/admin/pickup/{pickup:pickup_id}', [PickupController::class, 'destroy'])->name('admin.pickup.destroy');
 
 // 3.1 ACTIVITIES
-Route::get('/admin/activities', [PackagesController::class, 'index'])->name('admin.activities.index');
+Route::get('/admin/activities', [ActivitiesController::class, 'index'])->name('admin.activities.index');
+Route::get('/admin/activities/create', [ActivitiesController::class, 'create'])->name('admin.activities.create');
+Route::post('/admin/activities', [ActivitiesController::class, 'store'])->name('admin.activities.store');
+Route::get('/admin/activities/edit/{activities:activities_id}', [ActivitiesController::class, 'edit'])->name('admin.activities.edit');
+Route::put('/admin/activities/{activities:activities_id}', [ActivitiesController::class, 'update'])->name('admin.activities.update');
+Route::delete('/admin/activities/{activities:activities_id}', [ActivitiesController::class, 'destroy'])->name('admin.activities.destroy');
 
 // 2.X USER
 Route::get('/', [UserHomeController::class, 'index'])->name('user.home');

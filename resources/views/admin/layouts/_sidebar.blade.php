@@ -15,7 +15,7 @@
                 </a>
                 <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="{{ route('admin.activities.index') }}">Packages</a>
+                        <a class="nav-link" href="{{ route('admin.packages.index') }}">Packages</a>
                         <a class="nav-link" href="">Detail Itinerary</a>
                         <a class="nav-link" href="">Included Packages</a>
                         <a class="nav-link" href="">Additional Note</a>

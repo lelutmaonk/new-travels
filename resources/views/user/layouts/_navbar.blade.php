@@ -24,7 +24,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="">Activities in Bali</a>
+            <a class="nav-link " href="{{ route('user.pickup') }}">Activities in Bali</a>
           </li>
 
           <li class="nav-item">
