@@ -42,10 +42,11 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Description</label>
-                        <input type="text" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description', $packages->description) }}">
                         @error('description')
                             <div class="form-text text-danger">{{ $message }}</div>
                         @enderror
+                        <input id="description" type="hidden" name="description" value="{{ old('description' , $packages->description) }}">
+                        <trix-editor input="description"></trix-editor>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -79,10 +80,11 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Deskripsi</label>
-                        <input type="text" class="form-control @error('description_in') is-invalid @enderror" name="description_in" value="{{ old('description_in', $packages->description_in) }}">
                         @error('description_in')
                             <div class="form-text text-danger">{{ $message }}</div>
                         @enderror
+                        <input id="description_in" type="hidden" name="description_in" value="{{ old('description_in', $packages->description_in) }}">
+                        <trix-editor input="description_in"></trix-editor>
                     </div>
                 </div>
 

@@ -45,7 +45,7 @@
               </ul>
             </div>
             <div class="post-content color-text-a">
-              <p>{{ $packages->description }}</p>
+              {!! $packages->description !!}
             </div>
           </div>
         </div>

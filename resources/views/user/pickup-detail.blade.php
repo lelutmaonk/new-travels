@@ -37,7 +37,7 @@
               </ul>
             </div>
             <div class="post-content color-text-a">
-              <p>{{ $pickup->description }}</p>
+              {!! $pickup->description  !!}
             </div>
           </div>
         </div>
