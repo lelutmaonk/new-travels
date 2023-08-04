@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Activities;
 use App\Models\Packages;
 use App\Models\Pickup;
 use Illuminate\Http\Request;
@@ -51,6 +52,24 @@ class UserHomeController extends Controller
         return view('user.pickup-detail', [
             'title' => 'Pickup Detail',
             'pickup' => $pickup
+        ]);
+    }
+
+    public function activities()
+    {
+        $activities = Activities::orderBy('updated_at', 'desc')->get();
+
+        return view('user.activities', [
+            'title' => 'Activities',
+            'activities' => $activities
+        ]);
+    }
+
+    public function activitiesDetail(Activities $activities)
+    {
+        return view('user.activities-detail', [
+            'title' => 'Activities Detail',
+            'activities' => $activities
         ]);
     }
 
