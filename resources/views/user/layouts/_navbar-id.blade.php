@@ -12,27 +12,27 @@
         <ul class="navbar-nav">
 
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('user.home') }}">Home</a>
+            <a class="nav-link" href="{{ route('user.home') }}">Beranda</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="{{ route('user.packages') }}">Packages</a>
+            <a class="nav-link " href="{{ route('user.packages') }}">Paket</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="{{ route('user.pickup') }}">Pick Up</a>
+            <a class="nav-link " href="{{ route('user.pickup') }}">Jemputan</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="{{ route('user.activities') }}">Activities in Bali</a>
+            <a class="nav-link " href="{{ route('user.activities') }}">Aktivitas di Bali</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="{{ route('user.about') }}">About</a>
+            <a class="nav-link " href="{{ route('user.about') }}">Tentang</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="{{ route('user.contact') }}">Contact</a>
+            <a class="nav-link " href="{{ route('user.contact') }}">Kontak</a>
           </li>
 
         </ul>

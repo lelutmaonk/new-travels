@@ -13,7 +13,7 @@
           <div class="row">
             <div class="col-sm-12 position-relative">
               <div class="about-img-box">
-                <img src="https://images.unsplash.com/photo-1561131668-f63504fc549d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=857&q=80" alt="" class="img-fluid">
+                <img src="https://images.unsplash.com/photo-1558005530-a7958896ec60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80" alt="" class="img-fluid">
               </div>
               <div class="sinse-box">
                 <h3 class="sinse-title text-white">EXPLORE OUR

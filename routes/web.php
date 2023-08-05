@@ -4,6 +4,7 @@ use App\Http\Controllers\ActivitiesController;
 use App\Http\Controllers\PackagesController;
 use App\Http\Controllers\PickupController;
 use App\Http\Controllers\UserHomeController;
+use App\Http\Controllers\UserHomeIndonesiaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -55,4 +56,7 @@ Route::get('/pickup', [UserHomeController::class, 'pickup'])->name('user.pickup'
 Route::get('/pickup/{pickup:slug}', [UserHomeController::class, 'pickupDetail'])->name('user.pickup-detail');
 Route::get('/activities', [UserHomeController::class, 'activities'])->name('user.activities');
 Route::get('/activities/{activities:slug}', [UserHomeController::class, 'activitiesDetail'])->name('user.activities-detail');
+Route::get('/about', [UserHomeController::class, 'about'])->name('user.about');
+Route::get('/contact', [UserHomeController::class, 'contact'])->name('user.contact');
 
+Route::get('/id', [UserHomeIndonesiaController::class, 'index'])->name('user.home-id');

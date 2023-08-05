@@ -69,11 +69,11 @@
 
 <body>
 
-  @include('user.layouts._navbar')
+  @include('user.layouts._navbar-id')
   
   @yield('content')
 
-  @include('user.layouts._footer')
+  @include('user.layouts._footer-id')
 
   <div id="preloader"></div>
 

@@ -1,4 +1,4 @@
-@extends('user.layouts.main')
+@extends('user.layouts.main-id')
 
 @section('content')
     <!-- ======= Intro Section ======= -->
@@ -101,20 +101,22 @@
                 <div class="agent-info-box">
                   <div class="agent-title">
                     <div class="title-box-d">
-                      <h3 class="title-d">Enjoy the Journey with Us</h3>
+                      <h3 class="title-d">Nikmati Perjalanan Bersama Kami</h3>
                     </div>
                   </div>
                   <div class="agent-content mb-3">
                     <p class="content-d color-text-a">
-                      You're welcome for visiting our website. We are Melali To Bali, offering easy and affordable holiday trips to Bali.
+                      Terimakasih sudah berkunjung kesitus kami. Kami adalah Melali To Bali yang menawarkan perjalanan liburan ke Bali dengan mudah dan murah. 
                     </p>
                     <p class="content-d color-text-a">
-                      Bali is one of the popular tourist destinations in Indonesia and even worldwide. To enjoy a delightful vacation in Bali, you can choose to use our experienced and reliable services.                    </p>
-                    <p class="content-d color-text-a">
-                      Furthermore, we have a team of professionals with extensive experience in providing the best service. Our team is capable of providing accurate and clear information about the visited tourist attractions, as well as offering the best recommendations for dining and accommodation.
+                      Bali merupakan salah satu destinasi wisata yang populer di Indonesia dan bahkan di seluruh dunia. Untuk menikmati liburan yang menyenangkan di Bali, Anda dapat memilih untuk menggunakan jasa kami yang sudah berpengalaman dan terpercaya.
                     </p>
                     <p class="content-d color-text-a">
-                      We offer attractive and enjoyable holiday packages. We also provide a pleasant and unforgettable vacation experience for you, with intriguing holiday packages, a professional and experienced team, as well as flexible and responsive services.                    </p>
+                      Selain itu, kami memiliki tim yang profesional dan berpengalaman dalam memberikan pelayanan yang terbaik. Tim kami mampu memberikan informasi yang akurat dan jelas tentang objek wisata yang dikunjungi, serta memberikan rekomendasi terbaik untuk tempat makan dan penginapan.
+                    </p>
+                    <p class="content-d color-text-a">
+                      Kami menawarkan paket-paket liburan yang menarik dan menyenangkan. Kami juga memberikan pengalaman liburan yang menyenangkan dan tak terlupakan bagi kamu, dengan paket-paket liburan yang menarik, tim yang profesional dan berpengalaman, serta layanan yang fleksibel dan responsif.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -130,8 +132,8 @@
 
         <div class="col-md-12 text-center">
           <div class="title-single-box">
-            <h1 class="title-single">EXPLORE OUR</h1>
-            <span class="color-text-a">Tourist's Favorit Tour</span>
+            <h1 class="title-single">JELAJAHI KAMI</h1>
+            <span class="color-text-a">Tur Favorit Turis</span>
           </div>
         </div>
 
@@ -147,14 +149,14 @@
                 <div class="card-header-b">
                   <div class="card-title-b">
                     <h2 class="title-2">
-                      <a href="{{ route('user.packages-detail', ['packages' => $item->slug]) }}">{{ $item->packages_name }}</a>
+                      <a href="{{ route('user.packages-detail', ['packages' => $item->slug]) }}">{{ $item->packages_name_in }}</a>
                     </h2>
                   </div>
                   <div class="card-date">
-                    <a href="{{ route('user.packages-detail', ['packages' => $item->slug]) }}" class="date-b">{!! Str::limit($item->description, 50) !!}</a>
+                    <a href="{{ route('user.packages-detail', ['packages' => $item->slug]) }}" class="date-b">{!! Str::limit($item->description_in, 50) !!}</a>
                   </div>
                   <div class="card-category-b mt-2">
-                    <a href="{{ route('user.packages-detail', ['packages' => $item->slug]) }}" class="category-b text-white">{{ $item->price }}</a>
+                    <a href="{{ route('user.packages-detail', ['packages' => $item->slug]) }}" class="category-b text-white">{{ $item->price_in }}</a>
                   </div>
                 </div>
               </div>
