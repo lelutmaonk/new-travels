@@ -1,4 +1,4 @@
-@extends('user.layouts.main-id')
+@extends('user.layouts.main')
 
 @section('content')
     <!-- ======= Intro Section ======= -->
@@ -151,10 +151,7 @@
                     <h2 class="title-2">
                       <a href="{{ route('user.packages-detail', ['packages' => $item->slug]) }}">{{ $item->packages_name_in }}</a>
                     </h2>
-                  </div>
-                  <div class="card-date">
-                    <a href="{{ route('user.packages-detail', ['packages' => $item->slug]) }}" class="date-b">{!! Str::limit($item->description_in, 50) !!}</a>
-                  </div>
+                  </div>                  
                   <div class="card-category-b mt-2">
                     <a href="{{ route('user.packages-detail', ['packages' => $item->slug]) }}" class="category-b text-white">{{ $item->price_in }}</a>
                   </div>
