@@ -87,7 +87,7 @@
 
   <div class="dropdown language-dropdown p-3">
     <button class="btn btn-success dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-      Pilih Bahasa
+      Select a language
     </button>
     <ul class="dropdown-menu" aria-labelledby="languageDropdown">
       <li><a class="dropdown-item" href="{{ $indonesia }}">Indonesia</a></li>
