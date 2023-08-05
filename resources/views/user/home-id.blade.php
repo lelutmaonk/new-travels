@@ -1,4 +1,4 @@
-@extends('user.layouts.main')
+@extends('user.layouts.main-id')
 
 @section('content')
     <!-- ======= Intro Section ======= -->
