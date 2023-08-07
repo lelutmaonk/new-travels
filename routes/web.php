@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ActivitiesController;
+use App\Http\Controllers\PackagesAdditionalNoteController;
 use App\Http\Controllers\PackagesController;
 use App\Http\Controllers\PickupController;
 use App\Http\Controllers\UserHomeController;
@@ -31,6 +32,13 @@ Route::delete('/admin/packages/{packages:packages_id}', [PackagesController::cla
 // 1.2 DETAIL ITENARY
 // 1.3 INCLUDED PACKAGES
 // 1.4 ADDITONAL NOTE
+Route::get('/admin/packages-additional-note', [PackagesAdditionalNoteController::class, 'index'])->name('admin.packages-additional-note.index');
+Route::get('/admin/packages-additional-note/{packages:packages_id}', [PackagesAdditionalNoteController::class, 'list'])->name('admin.packages-additional-note.list');
+Route::get('/admin/packages-additional-note/create/{packages:packages_id}', [PackagesAdditionalNoteController::class, 'create'])->name('admin.packages-additional-note.create');
+Route::post('/admin/packages-additional-note', [PackagesAdditionalNoteController::class, 'store'])->name('admin.packages-additional-note.store');
+Route::get('/admin/packages-additional-note/edit/{additional_note:additional_note_id}', [PackagesAdditionalNoteController::class, 'edit'])->name('admin.packages-additional-note.edit');
+Route::put('/admin/packages-additional-note/{additional_note:additional_note_id}', [PackagesAdditionalNoteController::class, 'update'])->name('admin.packages-additional-note.update');
+Route::delete('/admin/packages-additional-note/{additional_note:additional_note_id}', [PackagesAdditionalNoteController::class, 'destroy'])->name('admin.packages-additional-note.destroy');
 
 // 2.1 PICKUP
 Route::get('/admin/pickup', [PickupController::class, 'index'])->name('admin.pickup.index');

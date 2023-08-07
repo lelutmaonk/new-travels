@@ -44,9 +44,6 @@
                       <a href="{{ route('user.activities-detail', ['activities' => $item->slug]) }}">{{ $item->activities_name }}</a>
                     </h2>
                   </div>
-                  <div class="card-date">
-                    <a href="{{ route('user.activities-detail', ['activities' => $item->slug]) }}" class="date-b">{!! Str::limit($item->description, 50) !!}</a>
-                  </div>
                 </div>
               </div>
             </div>

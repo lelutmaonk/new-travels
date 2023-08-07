@@ -44,9 +44,6 @@
                       <a href="{{ route('user.pickup-detail', ['pickup' => $item->slug]) }}">{{ $item->pickup_name }}</a>
                     </h2>
                   </div>
-                  <div class="card-date">
-                    <a href="{{ route('user.pickup-detail', ['pickup' => $item->slug]) }}" class="date-b">{!! Str::limit($item->description, 50) !!}</a>
-                  </div>
                   <div class="card-category-b mt-2">
                     <a href="{{ route('user.pickup-detail', ['pickup' => $item->slug]) }}" class="category-b text-white">{{ $item->price }}</a>
                   </div>

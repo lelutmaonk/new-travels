@@ -18,7 +18,7 @@
                         <a class="nav-link" href="{{ route('admin.packages.index') }}">Packages</a>
                         <a class="nav-link" href="">Detail Itinerary</a>
                         <a class="nav-link" href="">Included Packages</a>
-                        <a class="nav-link" href="">Additional Note</a>
+                        <a class="nav-link" href="{{ route('admin.packages-additional-note.index') }}">Additional Note</a>
                     </nav>
                 </div>
                 <a class="nav-link" href="{{ route('admin.pickup.index') }}">
