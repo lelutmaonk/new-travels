@@ -49,12 +49,12 @@
             </div>
 
             @if (count($packages->itinerary) > 0)
-            <div class="row section-t3">
+            <div class="row section-t3 mx-1">
               <table class="table table-bordered">
                 <thead class="table-dark">
                   <tr>
-                    <th scope="col">Start Time</th>
-                    <th scope="col">End Time</th>
+                    <th scope="col">Start</th>
+                    <th scope="col">End</th>
                     <th scope="col">Itinerary</th>
                   </tr>
                 </thead>
