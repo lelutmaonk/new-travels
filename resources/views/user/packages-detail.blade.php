@@ -48,6 +48,29 @@
               {!! $packages->description !!}
             </div>
 
+            @if (count($packages->itinerary) > 0)
+            <div class="row section-t3">
+              <table class="table table-bordered">
+                <thead class="table-dark">
+                  <tr>
+                    <th scope="col">Start Time</th>
+                    <th scope="col">End Time</th>
+                    <th scope="col">Itinerary</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @foreach ($packages->itinerary as $itinerary)
+                  <tr>
+                    <td>{{ $itinerary->start_time }}</td>
+                    <td>{{ $itinerary->end_time }}</td>
+                    <td>{{ $itinerary->itinerary_name }}</td>
+                  </tr>
+                  @endforeach
+                </tbody>
+              </table>
+            </div>
+            @endif
+           
             @if (count($packages->included) > 0)
               {{-- Included --}}
               <div class="row section-t3">
