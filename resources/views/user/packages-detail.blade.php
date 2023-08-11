@@ -48,39 +48,43 @@
               {!! $packages->description !!}
             </div>
 
-            {{-- Included --}}
-            <div class="row section-t3">
-              <div class="col-sm-12">
-                <div class="title-box-d">
-                  <h3 class="title-d">Included</h3>
+            @if (count($packages->included) > 0)
+              {{-- Included --}}
+              <div class="row section-t3">
+                <div class="col-sm-12">
+                  <div class="title-box-d">
+                    <h3 class="title-d">Included</h3>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="amenities-list color-text-a">
-              <ul class="">
-                @foreach ($packages->included as $included)
-                  <li>{{ $included->included_name }}</li>
-                @endforeach
-              </ul>
-            </div>
-            {{-- EndIncluded --}}
+              <div class="amenities-list color-text-a">
+                <ul class="">
+                  @foreach ($packages->included as $included)
+                    <li>{{ $included->included_name }}</li>
+                  @endforeach
+                </ul>
+              </div>
+              {{-- EndIncluded --}}
+            @endif
 
-            {{-- Included --}}
-            <div class="row section-t3">
-              <div class="col-sm-12">
-                <div class="title-box-d">
-                  <h3 class="title-d">Additional Note</h3>
+            @if (count($packages->additional_note) > 0)
+              {{-- Included --}}
+              <div class="row section-t3">
+                <div class="col-sm-12">
+                  <div class="title-box-d">
+                    <h3 class="title-d">Additional Note</h3>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="amenities-list color-text-a">
-              <ul class="">
-                @foreach ($packages->additional_note as $additional_note)
-                  <li>{{ $additional_note->additional_note_name }}</li>
-                @endforeach
-              </ul>
-            </div>
-            {{-- EndIncluded --}}
+              <div class="amenities-list color-text-a">
+                <ul class="">
+                  @foreach ($packages->additional_note as $additional_note)
+                    <li>{{ $additional_note->additional_note_name }}</li>
+                  @endforeach
+                </ul>
+              </div>
+              {{-- EndIncluded --}}
+            @endif
 
           </div>
         </div>
