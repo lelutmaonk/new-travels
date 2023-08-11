@@ -4,6 +4,7 @@ use App\Http\Controllers\ActivitiesController;
 use App\Http\Controllers\PackagesAdditionalNoteController;
 use App\Http\Controllers\PackagesController;
 use App\Http\Controllers\PackagesIncludedController;
+use App\Http\Controllers\PackagesItineraryController;
 use App\Http\Controllers\PickupController;
 use App\Http\Controllers\UserHomeController;
 use App\Http\Controllers\UserHomeIndonesiaController;
@@ -31,6 +32,13 @@ Route::get('/admin/packages/edit/{packages:packages_id}', [PackagesController::c
 Route::put('/admin/packages/{packages:packages_id}', [PackagesController::class, 'update'])->name('admin.packages.update');
 Route::delete('/admin/packages/{packages:packages_id}', [PackagesController::class, 'destroy'])->name('admin.packages.destroy');
 // 1.2 DETAIL ITENARY
+Route::get('/admin/packages-itinerary', [PackagesItineraryController::class, 'index'])->name('admin.packages-itinerary.index');
+Route::get('/admin/packages-itinerary/{packages:packages_id}', [PackagesItineraryController::class, 'list'])->name('admin.packages-itinerary.list');
+Route::get('/admin/packages-itinerary/create/{packages:packages_id}', [PackagesItineraryController::class, 'create'])->name('admin.packages-itinerary.create');
+Route::post('/admin/packages-itinerary', [PackagesItineraryController::class, 'store'])->name('admin.packages-itinerary.store');
+Route::get('/admin/packages-itinerary/edit/{itinerary:itinerary_id}', [PackagesItineraryController::class, 'edit'])->name('admin.packages-itinerary.edit');
+Route::put('/admin/packages-itinerary/{itinerary:itinerary_id}', [PackagesItineraryController::class, 'update'])->name('admin.packages-itinerary.update');
+Route::delete('/admin/packages-itinerary/{itinerary:itinerary_id}', [PackagesItineraryController::class, 'destroy'])->name('admin.packages-itinerary.destroy');
 // 1.3 INCLUDED PACKAGES
 Route::get('/admin/packages-included', [PackagesIncludedController::class, 'index'])->name('admin.packages-included.index');
 Route::get('/admin/packages-included/{packages:packages_id}', [PackagesIncludedController::class, 'list'])->name('admin.packages-included.list');

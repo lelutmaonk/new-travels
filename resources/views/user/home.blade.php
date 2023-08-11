@@ -101,21 +101,21 @@
                 <div class="agent-info-box">
                   <div class="agent-title">
                     <div class="title-box-d">
-                      <h3 class="title-d">Nikmati Perjalanan Bersama Kami</h3>
+                      <h3 class="title-d">Enjoy Traveling With Us</h3>
                     </div>
                   </div>
                   <div class="agent-content mb-3">
                     <p class="content-d color-text-a">
-                      Terimakasih sudah berkunjung kesitus kami. Kami adalah Melali To Bali yang menawarkan perjalanan liburan ke Bali dengan mudah dan murah. 
+                      Thank you for visiting our website. We are Melali Di Bali, which offers holiday trips to Bali easily and cheaply. 
                     </p>
                     <p class="content-d color-text-a">
-                      Bali merupakan salah satu destinasi wisata yang populer di Indonesia dan bahkan di seluruh dunia. Untuk menikmati liburan yang menyenangkan di Bali, Anda dapat memilih untuk menggunakan jasa kami yang sudah berpengalaman dan terpercaya.
+                      Bali is one of the most popular tourist destinations in Indonesia and even around the world. To enjoy a pleasant holiday in Bali, you can choose to use our experienced and trusted services.
                     </p>
                     <p class="content-d color-text-a">
-                      Selain itu, kami memiliki tim yang profesional dan berpengalaman dalam memberikan pelayanan yang terbaik. Tim kami mampu memberikan informasi yang akurat dan jelas tentang objek wisata yang dikunjungi, serta memberikan rekomendasi terbaik untuk tempat makan dan penginapan.
+                      In addition, we have a professional and experienced team in providing the best service. Our team is able to provide accurate and clear information about the attractions visited, as well as provide the best recommendations for places to eat and lodging.
                     </p>
                     <p class="content-d color-text-a">
-                      Kami menawarkan paket-paket liburan yang menarik dan menyenangkan. Kami juga memberikan pengalaman liburan yang menyenangkan dan tak terlupakan bagi kamu, dengan paket-paket liburan yang menarik, tim yang profesional dan berpengalaman, serta layanan yang fleksibel dan responsif.
+                      We offer attractive and fun holiday packages. We also provide a pleasant and unforgettable holiday experience for you, with attractive holiday packages, a professional and experienced team, and flexible and responsive services.
                     </p>
                   </div>
                 </div>

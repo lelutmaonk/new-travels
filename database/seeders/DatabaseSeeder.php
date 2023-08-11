@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Packages;
 use App\Models\PackagesAdditionalNote;
 use App\Models\PackagesIncluded;
+use App\Models\PackagesItinerary;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -61,6 +62,30 @@ class DatabaseSeeder extends Seeder
             'packages_id' => 1,
             'additional_note_name' => 'Bali Best Adventures will not refund any payment if the guest NO SHOW or make a cancellation one day before the trip.',
             'additional_note_name_in' => 'Bali Best Adventures tidak akan mengembalikan pembayaran apapun jika tamu NO SHOW atau melakukan pembatalan satu hari sebelum perjalanan.',
+        ]);
+
+        PackagesItinerary::create([
+            'packages_id' => 1,
+            'start_time' => '08:00',
+            'end_time' => '08:15',
+            'itinerary_name' => 'Pick up at your hotel',
+            'itinerary_name_in' => 'Jemput di hotel Anda',
+        ]);
+
+        PackagesItinerary::create([
+            'packages_id' => 1,
+            'start_time' => '08:15',
+            'end_time' => '10:00',
+            'itinerary_name' => 'Badung Traditional Market',
+            'itinerary_name_in' => 'Pasar Tradisional Badung',
+        ]);
+
+        PackagesItinerary::create([
+            'packages_id' => 1,
+            'start_time' => '10:00',
+            'end_time' => '12:00',
+            'itinerary_name' => 'Bajra Sandhi Monument',
+            'itinerary_name_in' => 'Monumen Bajra Sandhi',
         ]);
 
        

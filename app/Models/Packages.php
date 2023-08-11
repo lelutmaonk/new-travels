@@ -23,4 +23,9 @@ class Packages extends Model
         return $this->hasMany(PackagesIncluded::class, 'packages_id', 'packages_id');
     }
 
+    public function itinerary()
+    {
+        return $this->hasMany(PackagesItinerary::class, 'packages_id', 'packages_id');
+    }
+
 }
