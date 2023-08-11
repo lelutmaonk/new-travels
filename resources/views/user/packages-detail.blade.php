@@ -47,6 +47,41 @@
             <div class="post-content color-text-a">
               {!! $packages->description !!}
             </div>
+
+            {{-- Included --}}
+            <div class="row section-t3">
+              <div class="col-sm-12">
+                <div class="title-box-d">
+                  <h3 class="title-d">Included</h3>
+                </div>
+              </div>
+            </div>
+            <div class="amenities-list color-text-a">
+              <ul class="">
+                @foreach ($packages->included as $included)
+                  <li>{{ $included->included_name }}</li>
+                @endforeach
+              </ul>
+            </div>
+            {{-- EndIncluded --}}
+
+            {{-- Included --}}
+            <div class="row section-t3">
+              <div class="col-sm-12">
+                <div class="title-box-d">
+                  <h3 class="title-d">Additional Note</h3>
+                </div>
+              </div>
+            </div>
+            <div class="amenities-list color-text-a">
+              <ul class="">
+                @foreach ($packages->additional_note as $additional_note)
+                  <li>{{ $additional_note->additional_note_name }}</li>
+                @endforeach
+              </ul>
+            </div>
+            {{-- EndIncluded --}}
+
           </div>
         </div>
       </div>
