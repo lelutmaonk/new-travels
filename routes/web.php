@@ -3,6 +3,7 @@
 use App\Http\Controllers\ActivitiesController;
 use App\Http\Controllers\PackagesAdditionalNoteController;
 use App\Http\Controllers\PackagesController;
+use App\Http\Controllers\PackagesIncludedController;
 use App\Http\Controllers\PickupController;
 use App\Http\Controllers\UserHomeController;
 use App\Http\Controllers\UserHomeIndonesiaController;
@@ -31,6 +32,13 @@ Route::put('/admin/packages/{packages:packages_id}', [PackagesController::class,
 Route::delete('/admin/packages/{packages:packages_id}', [PackagesController::class, 'destroy'])->name('admin.packages.destroy');
 // 1.2 DETAIL ITENARY
 // 1.3 INCLUDED PACKAGES
+Route::get('/admin/packages-included', [PackagesIncludedController::class, 'index'])->name('admin.packages-included.index');
+Route::get('/admin/packages-included/{packages:packages_id}', [PackagesIncludedController::class, 'list'])->name('admin.packages-included.list');
+Route::get('/admin/packages-included/create/{packages:packages_id}', [PackagesIncludedController::class, 'create'])->name('admin.packages-included.create');
+Route::post('/admin/packages-included', [PackagesIncludedController::class, 'store'])->name('admin.packages-included.store');
+Route::get('/admin/packages-included/edit/{included:included_id}', [PackagesIncludedController::class, 'edit'])->name('admin.packages-included.edit');
+Route::put('/admin/packages-included/{included:included_id}', [PackagesIncludedController::class, 'update'])->name('admin.packages-included.update');
+Route::delete('/admin/packages-included/{included:included_id}', [PackagesIncludedController::class, 'destroy'])->name('admin.packages-included.destroy');
 // 1.4 ADDITONAL NOTE
 Route::get('/admin/packages-additional-note', [PackagesAdditionalNoteController::class, 'index'])->name('admin.packages-additional-note.index');
 Route::get('/admin/packages-additional-note/{packages:packages_id}', [PackagesAdditionalNoteController::class, 'list'])->name('admin.packages-additional-note.list');

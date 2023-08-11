@@ -13,4 +13,14 @@ class Packages extends Model
     protected $primaryKey = 'packages_id';
     protected $guarded = ['packages_id'];
 
+    public function additional_note()
+    {
+        return $this->hasMany(PackagesAdditionalNote::class, 'packages_id', 'packages_id');
+    }
+
+    public function included()
+    {
+        return $this->hasMany(PackagesIncluded::class, 'packages_id', 'packages_id');
+    }
+
 }
