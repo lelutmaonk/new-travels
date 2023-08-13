@@ -7,6 +7,7 @@ use App\Http\Controllers\PackagesIncludedController;
 use App\Http\Controllers\PackagesItineraryController;
 use App\Http\Controllers\PickupController;
 use App\Http\Controllers\PickupOrderProcessController;
+use App\Http\Controllers\PickupPriceController;
 use App\Http\Controllers\PickupTermsConditionsController;
 use App\Http\Controllers\UserHomeController;
 use App\Http\Controllers\UserHomeIndonesiaController;
@@ -66,7 +67,7 @@ Route::post('/admin/pickup', [PickupController::class, 'store'])->name('admin.pi
 Route::get('/admin/pickup/edit/{pickup:pickup_id}', [PickupController::class, 'edit'])->name('admin.pickup.edit');
 Route::put('/admin/pickup/{pickup:pickup_id}', [PickupController::class, 'update'])->name('admin.pickup.update');
 Route::delete('/admin/pickup/{pickup:pickup_id}', [PickupController::class, 'destroy'])->name('admin.pickup.destroy');
-// 2.1 Terms Conditions
+// 2.2 Terms Conditions
 Route::get('/admin/pickup-terms-conditions', [PickupTermsConditionsController::class, 'index'])->name('admin.pickup-terms-conditions.index');
 Route::get('/admin/pickup-terms-conditions/{pickup:pickup_id}', [PickupTermsConditionsController::class, 'list'])->name('admin.pickup-terms-conditions.list');
 Route::get('/admin/pickup-terms-conditions/create/{pickup:pickup_id}', [PickupTermsConditionsController::class, 'create'])->name('admin.pickup-terms-conditions.create');
@@ -74,7 +75,7 @@ Route::post('/admin/pickup-terms-conditions', [PickupTermsConditionsController::
 Route::get('/admin/pickup-terms-conditions/edit/{terms_conditions:terms_conditions_id}', [PickupTermsConditionsController::class, 'edit'])->name('admin.pickup-terms-conditions.edit');
 Route::put('/admin/pickup-terms-conditions/{terms_conditions:terms_conditions_id}', [PickupTermsConditionsController::class, 'update'])->name('admin.pickup-terms-conditions.update');
 Route::delete('/admin/pickup-terms-conditions/{terms_conditions:terms_conditions_id}', [PickupTermsConditionsController::class, 'destroy'])->name('admin.pickup-terms-conditions.destroy');
-// 2.2 Process Order
+// 2.3 Process Order
 Route::get('/admin/pickup-process-order', [PickupOrderProcessController::class, 'index'])->name('admin.pickup-process-order.index');
 Route::get('/admin/pickup-process-order/{pickup:pickup_id}', [PickupOrderProcessController::class, 'list'])->name('admin.pickup-process-order.list');
 Route::get('/admin/pickup-process-order/create/{pickup:pickup_id}', [PickupOrderProcessController::class, 'create'])->name('admin.pickup-process-order.create');
@@ -82,6 +83,14 @@ Route::post('/admin/pickup-process-order', [PickupOrderProcessController::class,
 Route::get('/admin/pickup-process-order/edit/{order_process:order_process_id}', [PickupOrderProcessController::class, 'edit'])->name('admin.pickup-process-order.edit');
 Route::put('/admin/pickup-process-order/{order_process:order_process_id}', [PickupOrderProcessController::class, 'update'])->name('admin.pickup-process-order.update');
 Route::delete('/admin/pickup-process-order/{order_process:order_process_id}', [PickupOrderProcessController::class, 'destroy'])->name('admin.pickup-process-order.destroy');
+// 2.4 Pickup Price
+Route::get('/admin/pickup-price', [PickupPriceController::class, 'index'])->name('admin.pickup-price.index');
+Route::get('/admin/pickup-price/{pickup:pickup_id}', [PickupPriceController::class, 'list'])->name('admin.pickup-price.list');
+Route::get('/admin/pickup-price/create/{pickup:pickup_id}', [PickupPriceController::class, 'create'])->name('admin.pickup-price.create');
+Route::post('/admin/pickup-price', [PickupPriceController::class, 'store'])->name('admin.pickup-price.store');
+Route::get('/admin/pickup-price/edit/{pickup_price:pickup_price_id}', [PickupPriceController::class, 'edit'])->name('admin.pickup-price.edit');
+Route::put('/admin/pickup-price/{pickup_price:pickup_price_id}', [PickupPriceController::class, 'update'])->name('admin.pickup-price.update');
+Route::delete('/admin/pickup-price/{pickup_price:pickup_price_id}', [PickupPriceController::class, 'destroy'])->name('admin.pickup-price.destroy');
 
 
 // 3.1 ACTIVITIES

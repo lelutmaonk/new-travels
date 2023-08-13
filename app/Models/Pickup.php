@@ -20,7 +20,12 @@ class Pickup extends Model
 
     public function order_process()
     {
-        return $this->hasMany(PickupOrderProcess::class, 'order_process', 'order_process');
+        return $this->hasMany(PickupOrderProcess::class, 'pickup_id', 'pickup_id');
+    }
+
+    public function pickup_price()
+    {
+        return $this->hasMany(PickupPrice::class, 'pickup_id', 'pickup_id');
     }
 
 }

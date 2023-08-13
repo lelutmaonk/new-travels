@@ -3,7 +3,7 @@
 @section('content')
 <div class="card mb-4">
     <div class="card-header">
-        Form Itinerary
+        Form Terms and Conditions
     </div>
     <div class="card-body">
 
