@@ -12,4 +12,10 @@ class Pickup extends Model
     protected $table = 'pickup';
     protected $primaryKey = 'pickup_id';
     protected $guarded = ['pickup_id'];
+
+    public function terms_conditions()
+    {
+        return $this->hasMany(PickupTermsConditions::class, 'pickup_id', 'pickup_id');
+    }
+
 }

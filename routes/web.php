@@ -6,6 +6,7 @@ use App\Http\Controllers\PackagesController;
 use App\Http\Controllers\PackagesIncludedController;
 use App\Http\Controllers\PackagesItineraryController;
 use App\Http\Controllers\PickupController;
+use App\Http\Controllers\PickupTermsConditionsController;
 use App\Http\Controllers\UserHomeController;
 use App\Http\Controllers\UserHomeIndonesiaController;
 use Illuminate\Support\Facades\Route;
@@ -63,6 +64,14 @@ Route::post('/admin/pickup', [PickupController::class, 'store'])->name('admin.pi
 Route::get('/admin/pickup/edit/{pickup:pickup_id}', [PickupController::class, 'edit'])->name('admin.pickup.edit');
 Route::put('/admin/pickup/{pickup:pickup_id}', [PickupController::class, 'update'])->name('admin.pickup.update');
 Route::delete('/admin/pickup/{pickup:pickup_id}', [PickupController::class, 'destroy'])->name('admin.pickup.destroy');
+// 2.1 Terms Conditions
+Route::get('/admin/pickup-terms-conditions', [PickupTermsConditionsController::class, 'index'])->name('admin.pickup-terms-conditions.index');
+Route::get('/admin/pickup-terms-conditions/{pickup:pickup_id}', [PickupTermsConditionsController::class, 'list'])->name('admin.pickup-terms-conditions.list');
+Route::get('/admin/pickup-terms-conditions/create/{pickup:pickup_id}', [PickupTermsConditionsController::class, 'create'])->name('admin.pickup-terms-conditions.create');
+Route::post('/admin/pickup-terms-conditions', [PickupTermsConditionsController::class, 'store'])->name('admin.pickup-terms-conditions.store');
+Route::get('/admin/pickup-terms-conditions/edit/{terms_conditions:terms_conditions_id}', [PickupTermsConditionsController::class, 'edit'])->name('admin.pickup-terms-conditions.edit');
+Route::put('/admin/pickup-terms-conditions/{terms_conditions:terms_conditions_id}', [PickupTermsConditionsController::class, 'update'])->name('admin.pickup-terms-conditions.update');
+Route::delete('/admin/pickup-terms-conditions/{terms_conditions:terms_conditions_id}', [PickupTermsConditionsController::class, 'destroy'])->name('admin.pickup-terms-conditions.destroy');
 
 // 3.1 ACTIVITIES
 Route::get('/admin/activities', [ActivitiesController::class, 'index'])->name('admin.activities.index');

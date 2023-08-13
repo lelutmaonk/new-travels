@@ -21,10 +21,17 @@
                         <a class="nav-link" href="{{ route('admin.packages-additional-note.index') }}">Additional Note</a>
                     </nav>
                 </div>
-                <a class="nav-link" href="{{ route('admin.pickup.index') }}">
-                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                    Pickup
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts1" aria-expanded="false" aria-controls="collapseLayouts1">
+                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                    Master Pickup
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
+                <div class="collapse" id="collapseLayouts1" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="{{ route('admin.pickup.index') }}">Pickup</a>
+                        <a class="nav-link" href="{{ route('admin.pickup-terms-conditions.index') }}">Terms and Conditions</a>
+                    </nav>
+                </div>
                 <a class="nav-link" href="{{ route('admin.activities.index') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                     Activities 
