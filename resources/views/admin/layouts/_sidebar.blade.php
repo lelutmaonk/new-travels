@@ -30,6 +30,7 @@
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link" href="{{ route('admin.pickup.index') }}">Pickup</a>
                         <a class="nav-link" href="{{ route('admin.pickup-terms-conditions.index') }}">Terms and Conditions</a>
+                        <a class="nav-link" href="{{ route('admin.pickup-process-order.index') }}">Process Order</a>
                     </nav>
                 </div>
                 <a class="nav-link" href="{{ route('admin.activities.index') }}">

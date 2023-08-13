@@ -18,4 +18,9 @@ class Pickup extends Model
         return $this->hasMany(PickupTermsConditions::class, 'pickup_id', 'pickup_id');
     }
 
+    public function order_process()
+    {
+        return $this->hasMany(PickupOrderProcess::class, 'order_process', 'order_process');
+    }
+
 }

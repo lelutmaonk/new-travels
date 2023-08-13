@@ -6,9 +6,11 @@ use App\Http\Controllers\PackagesController;
 use App\Http\Controllers\PackagesIncludedController;
 use App\Http\Controllers\PackagesItineraryController;
 use App\Http\Controllers\PickupController;
+use App\Http\Controllers\PickupOrderProcessController;
 use App\Http\Controllers\PickupTermsConditionsController;
 use App\Http\Controllers\UserHomeController;
 use App\Http\Controllers\UserHomeIndonesiaController;
+use App\Models\PickupOrderProcess;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -72,6 +74,15 @@ Route::post('/admin/pickup-terms-conditions', [PickupTermsConditionsController::
 Route::get('/admin/pickup-terms-conditions/edit/{terms_conditions:terms_conditions_id}', [PickupTermsConditionsController::class, 'edit'])->name('admin.pickup-terms-conditions.edit');
 Route::put('/admin/pickup-terms-conditions/{terms_conditions:terms_conditions_id}', [PickupTermsConditionsController::class, 'update'])->name('admin.pickup-terms-conditions.update');
 Route::delete('/admin/pickup-terms-conditions/{terms_conditions:terms_conditions_id}', [PickupTermsConditionsController::class, 'destroy'])->name('admin.pickup-terms-conditions.destroy');
+// 2.2 Process Order
+Route::get('/admin/pickup-process-order', [PickupOrderProcessController::class, 'index'])->name('admin.pickup-process-order.index');
+Route::get('/admin/pickup-process-order/{pickup:pickup_id}', [PickupOrderProcessController::class, 'list'])->name('admin.pickup-process-order.list');
+Route::get('/admin/pickup-process-order/create/{pickup:pickup_id}', [PickupOrderProcessController::class, 'create'])->name('admin.pickup-process-order.create');
+Route::post('/admin/pickup-process-order', [PickupOrderProcessController::class, 'store'])->name('admin.pickup-process-order.store');
+Route::get('/admin/pickup-process-order/edit/{order_process:order_process_id}', [PickupOrderProcessController::class, 'edit'])->name('admin.pickup-process-order.edit');
+Route::put('/admin/pickup-process-order/{order_process:order_process_id}', [PickupOrderProcessController::class, 'update'])->name('admin.pickup-process-order.update');
+Route::delete('/admin/pickup-process-order/{order_process:order_process_id}', [PickupOrderProcessController::class, 'destroy'])->name('admin.pickup-process-order.destroy');
+
 
 // 3.1 ACTIVITIES
 Route::get('/admin/activities', [ActivitiesController::class, 'index'])->name('admin.activities.index');
