@@ -8,6 +8,7 @@ use App\Http\Controllers\PackagesItineraryController;
 use App\Http\Controllers\PickupController;
 use App\Http\Controllers\PickupOrderProcessController;
 use App\Http\Controllers\PickupPriceController;
+use App\Http\Controllers\PickupPriceDetailController;
 use App\Http\Controllers\PickupTermsConditionsController;
 use App\Http\Controllers\UserHomeController;
 use App\Http\Controllers\UserHomeIndonesiaController;
@@ -91,6 +92,14 @@ Route::post('/admin/pickup-price', [PickupPriceController::class, 'store'])->nam
 Route::get('/admin/pickup-price/edit/{pickup_price:pickup_price_id}', [PickupPriceController::class, 'edit'])->name('admin.pickup-price.edit');
 Route::put('/admin/pickup-price/{pickup_price:pickup_price_id}', [PickupPriceController::class, 'update'])->name('admin.pickup-price.update');
 Route::delete('/admin/pickup-price/{pickup_price:pickup_price_id}', [PickupPriceController::class, 'destroy'])->name('admin.pickup-price.destroy');
+// 2.5. Pickup Price Detail
+Route::get('/admin/pickup-price-detail', [PickupPriceDetailController::class, 'index'])->name('admin.pickup-price-detail.index');
+Route::get('/admin/pickup-price-detail/{pickup_price:pickup_price_id}', [PickupPriceDetailController::class, 'list'])->name('admin.pickup-price-detail.list');
+Route::get('/admin/pickup-price-detail/create/{pickup_price:pickup_price_id}', [PickupPriceDetailController::class, 'create'])->name('admin.pickup-price-detail.create');
+Route::post('/admin/pickup-price-detail', [PickupPriceDetailController::class, 'store'])->name('admin.pickup-price-detail.store');
+Route::get('/admin/pickup-price-detail/edit/{pickup_price_detail:pickup_price_detail_id}', [PickupPriceDetailController::class, 'edit'])->name('admin.pickup-price-detail.edit');
+Route::put('/admin/pickup-price-detail/{pickup_price_detail:pickup_price_detail_id}', [PickupPriceDetailController::class, 'update'])->name('admin.pickup-price-detail.update');
+Route::delete('/admin/pickup-price-detail/{pickup_price_detail:pickup_price_detail_id}', [PickupPriceDetailController::class, 'destroy'])->name('admin.pickup-price-detail.destroy');
 
 
 // 3.1 ACTIVITIES

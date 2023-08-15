@@ -7,8 +7,8 @@
     </div>
     <div class="card-body">
         <table class="table table-bordered">
-            <a href="{{ route('admin.pickup-price.index') }}" class="btn btn-sm btn-danger mb-3">Back</a>
-            <a href="{{ route('admin.pickup-price.create', ['pickup' => $pickup->pickup_id]) }}" class="btn btn-sm btn-success mb-3 mx-2">Create Pickup Price</a>
+            <a href="{{ route('admin.pickup-price.list', ['pickup' => $pickup_price->pickup?->pickup_id]) }}" class="btn btn-sm btn-danger mb-3">Back</a>
+            <a href="{{ route('admin.pickup-price-detail.create', ['pickup_price' => $pickup_price->pickup_price_id]) }}" class="btn btn-sm btn-success mb-3 mx-2">Create Pickup Price</a>
       
             @if (session('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -19,18 +19,23 @@
 
             <thead>
                 <tr>
-                  <th scope="col">Pickup Price</th>
+                  <th scope="col">From</th>
+                  <th scope="col">Destination</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Notes</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
-                @foreach ($pickupPrice as $item)
+                @foreach ($PickupPriceDetail as $item)
                 <tr>
-                    <td>{{ $item->pickup_price_name }}</td>
+                    <td>{{ $item->from }}</td>
+                    <td>{{ $item->destination }}</td>
+                    <td>{{ $item->price }}</td>
+                    <td>{{ $item->notes }}</td>
                     <td>
-                        <a href="{{ route('admin.pickup-price-detail.list', ['pickup_price' => $item->pickup_price_id]) }}" class="btn btn-sm btn-success">Detail</a>
-                        <a href="{{ route('admin.pickup-price.edit', ['pickup_price' => $item->pickup_price_id]) }}" class="btn btn-sm btn-primary">Update</a>
-                        <form method="POST" action="{{ route('admin.pickup-price.destroy', ['pickup_price' => $item->pickup_price_id]) }}" class="d-inline">
+                        <a href="{{ route('admin.pickup-price-detail.edit', ['pickup_price_detail' => $item->pickup_price_detail_id]) }}" class="btn btn-sm btn-primary">Update</a>
+                        <form method="POST" action="{{ route('admin.pickup-price-detail.destroy', ['pickup_price_detail' => $item->pickup_price_detail_id]) }}" class="d-inline">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-sm btn-danger">

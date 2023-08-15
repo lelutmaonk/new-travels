@@ -17,4 +17,10 @@ class PickupPrice extends Model
     {
         return $this->belongsTo(Pickup::class, 'pickup_id', 'pickup_id');
     }
+
+    public function detail()
+    {
+        return $this->hasMany(PickupPriceDetail::class, 'pickup_price_id', 'pickup_price_id');
+    }
+
 }
